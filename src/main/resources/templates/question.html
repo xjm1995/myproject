@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${sectionName}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+
+</head>
+<body>
+    <div th:insert="navigation :: nav"></div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                <h2><span th:text="${sectionName}"></span></h2>
+                <hr>
+                <div class="media" th:each="q:${questions}">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object img-circle" th:src="${q.user.getAvatar_url()}" th:width="38px">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading" th:text="${q.getTitle()}"></h4>
+                        <span th:text="${q.getDescription()}"></span><br>
+                        <span th:text="${q.getComment_count()}"></span>个回复数<span th:text="${q.getView_count()}"></span>个浏览数
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                <div class="list-group">
+                    <a href="#"  th:class="${section == 'questions'}?'active list-group-item':'list-group-item'">我的提问</a>
+                    <a href="#" th:class="${section == 'replies'}?'active list-group-item':'list-group-item'">我的回复</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
