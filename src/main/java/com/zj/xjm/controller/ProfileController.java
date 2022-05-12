@@ -42,5 +42,4 @@ public class MyQuestionsController {
 
         return "myQuestions";
     }
-    //第一次提交
 }
