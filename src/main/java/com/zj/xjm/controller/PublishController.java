@@ -1,4 +1,4 @@
 package com.zj.xjm.controller;
 
-public class Pu {
+public class PublishController {
 }

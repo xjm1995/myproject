@@ -1,4 +1,4 @@
 package com.zj.xjm.dto;
 
-public class questionDTO {
+public class QuestionDTO {
 }
