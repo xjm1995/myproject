@@ -38,6 +38,11 @@
             <artifactId>jsoup</artifactId>
             <version>1.16.1</version> <!-- 目前最新稳定版 -->
         </dependency>
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+            <version>3.16.8</version>
+        </dependency>
 
 <!--        &lt;!&ndash; mysql 阿里德鲁伊&ndash;&gt;-->
 <!--        <dependency>-->
